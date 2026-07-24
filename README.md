@@ -9,13 +9,13 @@ A modern, responsive, and visually engaging gym website built using HTML, CSS, a
 ## Preview
 
 ## Hero Section
-![Hero Section}(Screenshots\Hero_section.png)
+![Hero Section](Screenshots\Hero_section.png)
 ## About Section
-![About Section}(Screenshots\About_section.png)
+![About Section](Screenshots\About_section.png)
 ## Experts Section
-![Experts Section}(Screenshots\Experts.pngg)
+![Experts Section](Screenshots\Experts.pngg)
 ## BMI Calculator Section
-![ BMI Calculato Section}(Screenshots\BMI Calculator.png)
+![ BMI Calculato Section](Screenshots\BMI Calculator.png)
 
 ## Features
 Responsive design for all screen sizes
