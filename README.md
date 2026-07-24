@@ -1,10 +1,10 @@
-PowerFit Gym
+## PowerFit Gym
 
 A modern, responsive, and visually engaging gym website built using HTML, CSS, and JavaScript. This project showcases a professional fitness website with a clean user interface, smooth navigation, and an optimized experience across desktops, tablets, and mobile devices.
 
 ## Live Demo
 
- Add your GitHub Pages link here after deployment.
+ https://arvaa11.github.io/PowerFit-GYM/
 
 ## Preview
 
