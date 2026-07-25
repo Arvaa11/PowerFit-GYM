@@ -177,8 +177,8 @@ header {
 
 .hero h1 {
 
-    color: #111827
-    font-s;ize: 62px;
+    color: #111827;
+    font-size: 62px;
     margin-bottom: 20px;
 
 }
@@ -1354,4 +1354,302 @@ footer {
 
     }
 
+}
+
+/* ==========================
+   Responsive Layout Refinements
+========================== */
+
+html {
+    min-width: 320px;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+.navbar,
+.about,
+.statistics,
+.features,
+.programs,
+.trainers,
+.gallery,
+.pricing,
+.bmi,
+.cta,
+.testimonials,
+.contact,
+.newsletter {
+    width: min(100% - 40px, 1200px);
+}
+
+.navbar {
+    width: min(100% - 40px, 1200px);
+}
+
+.feature-grid,
+.program-grid,
+.trainer-grid,
+.pricing-grid,
+.testimonial-grid,
+.gallery-grid,
+.footer-content {
+    min-width: 0;
+}
+
+@media (max-width: 1024px) {
+    .navbar {
+        padding: 16px 0;
+    }
+
+    .nav-links {
+        gap: 18px;
+    }
+
+    .hero h1,
+    .about-content h2,
+    .section-title h2,
+    .contact-info h2,
+    .cta h2 {
+        font-size: 36px;
+    }
+
+    .program-grid,
+    .trainer-grid,
+    .pricing-grid,
+    .testimonial-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .contact {
+        gap: 40px;
+    }
+}
+
+@media (max-width: 760px) {
+    header {
+        position: sticky;
+    }
+
+    .navbar {
+        width: 100%;
+        padding: 12px 20px;
+        gap: 12px;
+        flex-wrap: wrap;
+    }
+
+    .logo h2 {
+        font-size: 24px;
+    }
+
+    .logo i {
+        font-size: 26px;
+    }
+
+    .navbar > .btn {
+        margin-left: auto;
+        padding: 9px 16px;
+    }
+
+    .nav-links {
+        order: 3;
+        width: 100%;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        gap: 4px;
+        overflow-x: auto;
+        padding: 4px 0 2px;
+        scrollbar-width: thin;
+    }
+
+    .nav-links li {
+        flex: 0 0 auto;
+    }
+
+    .nav-links a {
+        display: block;
+        padding: 8px 10px;
+        white-space: nowrap;
+    }
+
+    .hero {
+        min-height: 680px;
+        height: auto;
+        padding: 90px 20px 56px;
+    }
+
+    .hero h1 {
+        font-size: 38px;
+        line-height: 1.2;
+    }
+
+    .hero p {
+        font-size: 16px;
+        line-height: 1.65;
+    }
+
+    .about,
+    .contact {
+        grid-template-columns: 1fr;
+        gap: 32px;
+        margin: 72px auto;
+    }
+
+    .about-content {
+        text-align: left;
+    }
+
+    .statistics {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 16px;
+        margin: 64px auto;
+    }
+
+    .features,
+    .programs,
+    .trainers,
+    .gallery,
+    .pricing,
+    .bmi,
+    .cta,
+    .testimonials,
+    .newsletter {
+        margin: 72px auto;
+    }
+
+    .feature-grid,
+    .program-grid,
+    .trainer-grid,
+    .pricing-grid,
+    .testimonial-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .gallery-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+    }
+
+    .gallery-grid img {
+        height: 220px;
+        border-radius: 12px;
+    }
+
+    .footer-content {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar,
+    .about,
+    .statistics,
+    .features,
+    .programs,
+    .trainers,
+    .gallery,
+    .pricing,
+    .bmi,
+    .cta,
+    .testimonials,
+    .contact,
+    .newsletter {
+        width: min(100% - 28px, 1200px);
+    }
+
+    .navbar {
+        padding-inline: 14px;
+    }
+
+    .navbar > .btn {
+        font-size: 13px;
+        padding: 8px 12px;
+    }
+
+    .hero {
+        min-height: 610px;
+        padding-inline: 14px;
+    }
+
+    .hero h1,
+    .about-content h2,
+    .section-title h2,
+    .contact-info h2,
+    .cta h2 {
+        font-size: 30px;
+    }
+
+    .hero-buttons {
+        gap: 12px;
+    }
+
+    .hero-buttons .btn,
+    .hero-buttons .btn-outline {
+        width: 100%;
+        text-align: center;
+    }
+
+    .statistics,
+    .gallery-grid,
+    .footer-content {
+        grid-template-columns: 1fr;
+    }
+
+    .stat-card,
+    .feature-card,
+    .program-card,
+    .price-card,
+    .testimonial-card,
+    .bmi-box,
+    .contact-form {
+        padding: 24px 20px;
+        border-radius: 14px;
+    }
+
+    .cta,
+    .newsletter {
+        padding: 44px 20px;
+        border-radius: 16px;
+    }
+
+    .newsletter form {
+        flex-direction: column;
+    }
+
+    .newsletter input {
+        width: 100%;
+    }
+
+    .contact-item {
+        align-items: flex-start;
+        gap: 14px;
+    }
+
+    .trainer-card img,
+    .gallery-grid img {
+        height: 240px;
+    }
+
+    footer {
+        padding-top: 52px;
+    }
+
+    .footer-content,
+    .footer-brand,
+    .footer-links {
+        text-align: center;
+        align-items: center;
+    }
+
+    .footer-brand .logo,
+    .socials {
+        justify-content: center;
+    }
 }
