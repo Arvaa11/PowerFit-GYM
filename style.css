@@ -1292,88 +1292,198 @@ footer {
 
 }
 
+/* =========================================
+   FINAL MOBILE RESPONSIVE DESIGN
+========================================= */
 
-/* ==========================
-   Final Responsive Design
-========================== */
 
-@media(max-width:900px) {
+/* Tablets */
+@media(max-width: 992px){
 
-    .contact {
-
-        grid-template-columns: 1fr;
-
+    .hero h1{
+        font-size:48px;
     }
 
-    .footer-content {
-
-        grid-template-columns:
-            repeat(2, 1fr);
-
+    .about,
+    .contact{
+        grid-template-columns:1fr;
+        text-align:center;
     }
+
+
+    .about-content p,
+    .contact-info p{
+        max-width:700px;
+        margin-left:auto;
+        margin-right:auto;
+    }
+
+
+    .statistics{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+
+    .footer-content{
+        grid-template-columns:repeat(2,1fr);
+    }
+
 
 }
 
-@media(max-width:600px) {
 
-    .newsletter form {
+/* Mobile Devices */
+@media(max-width:768px){
 
-        flex-direction: column;
 
-    }
+/* GLOBAL */
 
-    .newsletter input {
+body{
+    overflow-x:hidden;
+}
 
-        width: 100%;
 
-    }
+section{
+    scroll-margin-top:80px;
+}
 
-    .footer-content {
 
-        grid-template-columns: 1fr;
+/* HEADER */
 
-        text-align: center;
+header{
+    position:sticky;
+    top:0;
+}
 
-    }
 
-    .footer-brand .logo {
+.navbar{
 
-        justify-content: center;
+    width:100%;
+    padding:15px 20px;
 
-    }
-
-    .footer-brand p {
-
-        margin: auto;
-
-    }
-
-    .socials {
-
-        justify-content: center;
-
-    }
+    flex-direction:column;
+    gap:15px;
 
 }
 
-/* ==========================
-   Responsive Layout Refinements
-========================== */
 
-html {
-    min-width: 320px;
+.logo h2{
+    font-size:24px;
 }
 
-body {
-    overflow-x: hidden;
+
+.logo i{
+    font-size:26px;
 }
 
-img {
-    display: block;
-    max-width: 100%;
+
+
+.nav-links{
+
+    width:100%;
+
+    display:flex;
+
+    overflow-x:auto;
+
+    justify-content:flex-start;
+
+    gap:10px;
+
+    padding-bottom:8px;
+
 }
 
-.navbar,
+
+
+.nav-links::-webkit-scrollbar{
+    height:4px;
+}
+
+
+
+.nav-links a{
+
+    background:#1e293b;
+
+    padding:8px 15px;
+
+    border-radius:20px;
+
+    font-size:14px;
+
+}
+
+
+
+.navbar>.btn{
+
+    display:none;
+
+}
+
+
+
+/* HERO */
+
+
+.hero{
+
+    min-height:650px;
+
+    padding:100px 20px 50px;
+
+}
+
+
+.hero-content{
+
+    width:100%;
+
+}
+
+
+.hero h1{
+
+    font-size:36px;
+
+    line-height:1.25;
+
+}
+
+
+
+.hero p{
+
+    font-size:15px;
+
+    line-height:1.7;
+
+}
+
+
+
+.hero-buttons{
+
+    flex-direction:column;
+
+    width:100%;
+
+}
+
+
+
+.hero-buttons a{
+
+    width:100%;
+
+}
+
+
+
+/* SECTION SPACING */
+
+
 .about,
 .statistics,
 .features,
@@ -1385,271 +1495,398 @@ img {
 .cta,
 .testimonials,
 .contact,
-.newsletter {
-    width: min(100% - 40px, 1200px);
+.newsletter{
+
+    width:calc(100% - 30px);
+
+    margin:60px auto;
+
 }
 
-.navbar {
-    width: min(100% - 40px, 1200px);
+
+
+/* HEADINGS */
+
+
+.about-content h2,
+.section-title h2,
+.contact-info h2,
+.cta h2{
+
+    font-size:30px;
+
 }
+
+
+
+.section-title p{
+
+    font-size:14px;
+
+}
+
+
+
+/* ABOUT */
+
+
+.about{
+
+    gap:30px;
+
+}
+
+
+
+.about-image img{
+
+    border-radius:15px;
+
+}
+
+
+/* STATISTICS */
+
+
+.statistics{
+
+    grid-template-columns:1fr 1fr;
+
+    gap:15px;
+
+}
+
+
+
+.stat-card{
+
+    padding:20px;
+
+}
+
+
+
+.stat-card h2{
+
+    font-size:32px;
+
+}
+
+
+
+.stat-card p{
+
+    font-size:14px;
+
+}
+
+
+
+
+/* ALL CARDS */
+
 
 .feature-grid,
 .program-grid,
 .trainer-grid,
 .pricing-grid,
-.testimonial-grid,
-.gallery-grid,
-.footer-content {
-    min-width: 0;
+.testimonial-grid{
+
+    grid-template-columns:1fr;
+
+    gap:20px;
+
 }
 
-@media (max-width: 1024px) {
-    .navbar {
-        padding: 16px 0;
-    }
 
-    .nav-links {
-        gap: 18px;
-    }
 
-    .hero h1,
-    .about-content h2,
-    .section-title h2,
-    .contact-info h2,
-    .cta h2 {
-        font-size: 36px;
-    }
+.feature-card,
+.program-card,
+.price-card,
+.testimonial-card{
 
-    .program-grid,
-    .trainer-grid,
-    .pricing-grid,
-    .testimonial-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
+    padding:25px 20px;
 
-    .contact {
-        gap: 40px;
-    }
+    border-radius:15px;
+
 }
 
-@media (max-width: 760px) {
-    header {
-        position: sticky;
-    }
 
-    .navbar {
-        width: 100%;
-        padding: 12px 20px;
-        gap: 12px;
-        flex-wrap: wrap;
-    }
 
-    .logo h2 {
-        font-size: 24px;
-    }
+.feature-card i,
+.program-card i{
 
-    .logo i {
-        font-size: 26px;
-    }
+    font-size:38px;
 
-    .navbar > .btn {
-        margin-left: auto;
-        padding: 9px 16px;
-    }
-
-    .nav-links {
-        order: 3;
-        width: 100%;
-        flex-wrap: nowrap;
-        justify-content: flex-start;
-        gap: 4px;
-        overflow-x: auto;
-        padding: 4px 0 2px;
-        scrollbar-width: thin;
-    }
-
-    .nav-links li {
-        flex: 0 0 auto;
-    }
-
-    .nav-links a {
-        display: block;
-        padding: 8px 10px;
-        white-space: nowrap;
-    }
-
-    .hero {
-        min-height: 680px;
-        height: auto;
-        padding: 90px 20px 56px;
-    }
-
-    .hero h1 {
-        font-size: 38px;
-        line-height: 1.2;
-    }
-
-    .hero p {
-        font-size: 16px;
-        line-height: 1.65;
-    }
-
-    .about,
-    .contact {
-        grid-template-columns: 1fr;
-        gap: 32px;
-        margin: 72px auto;
-    }
-
-    .about-content {
-        text-align: left;
-    }
-
-    .statistics {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 16px;
-        margin: 64px auto;
-    }
-
-    .features,
-    .programs,
-    .trainers,
-    .gallery,
-    .pricing,
-    .bmi,
-    .cta,
-    .testimonials,
-    .newsletter {
-        margin: 72px auto;
-    }
-
-    .feature-grid,
-    .program-grid,
-    .trainer-grid,
-    .pricing-grid,
-    .testimonial-grid {
-        grid-template-columns: 1fr;
-        gap: 20px;
-    }
-
-    .gallery-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 12px;
-    }
-
-    .gallery-grid img {
-        height: 220px;
-        border-radius: 12px;
-    }
-
-    .footer-content {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
 }
 
-@media (max-width: 480px) {
-    .navbar,
-    .about,
-    .statistics,
-    .features,
-    .programs,
-    .trainers,
-    .gallery,
-    .pricing,
-    .bmi,
-    .cta,
-    .testimonials,
-    .contact,
-    .newsletter {
-        width: min(100% - 28px, 1200px);
-    }
 
-    .navbar {
-        padding-inline: 14px;
-    }
 
-    .navbar > .btn {
-        font-size: 13px;
-        padding: 8px 12px;
-    }
+/* TRAINERS */
 
-    .hero {
-        min-height: 610px;
-        padding-inline: 14px;
-    }
 
-    .hero h1,
-    .about-content h2,
-    .section-title h2,
-    .contact-info h2,
-    .cta h2 {
-        font-size: 30px;
-    }
+.trainer-card img{
 
-    .hero-buttons {
-        gap: 12px;
-    }
+    height:260px;
 
-    .hero-buttons .btn,
-    .hero-buttons .btn-outline {
-        width: 100%;
-        text-align: center;
-    }
+}
 
-    .statistics,
-    .gallery-grid,
-    .footer-content {
-        grid-template-columns: 1fr;
-    }
 
-    .stat-card,
-    .feature-card,
-    .program-card,
-    .price-card,
-    .testimonial-card,
-    .bmi-box,
-    .contact-form {
-        padding: 24px 20px;
-        border-radius: 14px;
-    }
 
-    .cta,
-    .newsletter {
-        padding: 44px 20px;
-        border-radius: 16px;
-    }
 
-    .newsletter form {
-        flex-direction: column;
-    }
+/* GALLERY */
 
-    .newsletter input {
-        width: 100%;
-    }
 
-    .contact-item {
-        align-items: flex-start;
-        gap: 14px;
-    }
+.gallery-grid{
 
-    .trainer-card img,
-    .gallery-grid img {
-        height: 240px;
-    }
+    grid-template-columns:1fr;
 
-    footer {
-        padding-top: 52px;
-    }
+}
 
-    .footer-content,
-    .footer-brand,
-    .footer-links {
-        text-align: center;
-        align-items: center;
-    }
 
-    .footer-brand .logo,
-    .socials {
-        justify-content: center;
-    }
+
+.gallery-grid img{
+
+    height:240px;
+
+}
+
+
+/* PRICING */
+
+
+.price-card h1{
+
+    font-size:40px;
+
+}
+
+
+
+/* BMI */
+
+
+.bmi-box{
+
+    padding:25px 20px;
+
+}
+
+
+
+.bmi-box input{
+
+    font-size:15px;
+
+}
+
+
+
+/* CTA */
+
+
+.cta{
+
+    padding:45px 20px;
+
+}
+
+
+
+.cta p{
+
+    font-size:15px;
+
+}
+
+
+
+
+/* CONTACT */
+
+
+.contact{
+
+    gap:30px;
+
+}
+
+
+
+.contact-form{
+
+    padding:25px 20px;
+
+}
+
+
+
+.contact-item{
+
+    align-items:flex-start;
+
+}
+
+
+
+.contact-item i{
+
+    width:45px;
+
+    height:45px;
+
+}
+
+
+
+/* NEWSLETTER */
+
+
+.newsletter{
+
+    padding:45px 20px;
+
+}
+
+
+
+.newsletter h2{
+
+    font-size:28px;
+
+}
+
+
+
+.newsletter input{
+
+    width:100%;
+
+}
+
+
+
+/* FOOTER */
+
+
+.footer-content{
+
+    grid-template-columns:1fr;
+
+    text-align:center;
+
+}
+
+
+
+.footer-brand p{
+
+    margin:auto;
+
+}
+
+
+
+.footer-links{
+
+    align-items:center;
+
+}
+
+
+
+.socials{
+
+    justify-content:center;
+
+}
+
+
+
+}
+
+
+
+/* SMALL PHONES */
+
+@media(max-width:480px){
+
+
+.logo h2{
+
+    font-size:21px;
+
+}
+
+
+
+.hero h1{
+
+    font-size:30px;
+
+}
+
+
+
+.hero{
+
+    min-height:600px;
+
+}
+
+
+
+.statistics{
+
+    grid-template-columns:1fr;
+
+}
+
+
+
+.btn,
+.btn-outline{
+
+    padding:11px 20px;
+
+    font-size:14px;
+
+}
+
+
+
+.about-content p,
+.feature-card p,
+.program-card p,
+.testimonial-card p{
+
+    font-size:14px;
+
+}
+
+
+
+.contact-item h3{
+
+    font-size:16px;
+
+}
+
+
+
+.contact-item p{
+
+    font-size:14px;
+
+}
+
+
+
+footer{
+
+    padding:45px 15px 20px;
+
+}
+
+
 }
